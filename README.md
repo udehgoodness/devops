@@ -33,7 +33,7 @@ This course has equipped me with the following key skills and knowledge:
 
 Feel free to explore the projects and exercises completed during the course:
 
-		CI/CD Pipeline:
+		[CI/CD Pipeline](https://github.com/udehgoodness/devops/tree/main/CI-Jenkins):
 	•	Jenkinsfile or GitLab CI configuration demonstrating a complete CI/CD pipeline.
  
 		Infrastructure as Code:
