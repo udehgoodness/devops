@@ -1,0 +1,56 @@
+Basics of using Ubuntu operating system, highlighting some key differences between Ubuntu and CentOS. Here are the main points covered:
+
+User Management:
+
+Ubuntu uses the adduser command instead of useradd to create new users. This command creates a user, group, home directory, and copies files from /etc/skel to the user's home directory.
+
+bash
+Copy code
+adduser devops
+Sudo Configuration:
+
+In Ubuntu, the default editor for sudo configuration is nano. If you prefer to use vim, you can set it as the default editor temporarily using the export command:
+
+bash
+Copy code
+export EDITOR=vim
+To make this change permanent, further configuration can be done (details not covered in this segment).
+
+Package Management:
+
+Ubuntu uses apt for package management instead of yum used in CentOS.
+
+The command apt update refreshes the package lists, and apt upgrade upgrades all the installed packages.
+
+bash
+Copy code
+apt update
+apt upgrade
+To search for packages, apt search can be used, and to install a package, apt install.
+
+bash
+Copy code
+apt search tree
+apt install tree
+Package removal can be done using apt remove or apt purge. The purge option removes the package along with its configuration files.
+
+bash
+Copy code
+apt remove apache2
+apt purge apache2
+Service Management:
+
+Ubuntu uses systemctl for service management similar to CentOS. Services can be enabled, started, stopped, or restarted using systemctl.
+
+bash
+Copy code
+systemctl enable apache2
+systemctl start apache2
+systemctl stop apache2
+systemctl restart apache2
+Firewall Configuration:
+
+Ubuntu uses ufw (Uncomplicated Firewall) for managing the firewall. When installing or uninstalling services like Apache2, ufw is automatically updated.
+Other Notes:
+
+The command dpkg -l lists all installed Debian packages.
