@@ -1,0 +1,42 @@
+Setting up MySQL, Memcache, and RabbitMQ services as part of the VProfile project. The goal is to establish the backend services in the following order: MySQL, Memcache, RabbitMQ, Tomcat, and Nginx.
+
+MySQL Setup:
+
+Switch to the root user on the virtual machine.
+Run the command yum update to update the packages to the latest versions.
+Install the necessary packages: yum install -y mariadb-server git.
+Start and enable the MariaDB service: systemctl start mariadb and systemctl enable mariadb.
+Run the command mysql_secure_installation to set up and secure the MySQL installation. This involves setting the root password, removing anonymous users, disallowing remote root login, and more.
+
+Database Setup:
+
+Log in to MySQL: mysql -u root -p.
+Create a database named "accounts": CREATE DATABASE accounts;.
+Grant privileges to a user named "admin" with the password "admin123" to access the database remotely: GRANT ALL PRIVILEGES ON accounts.* TO 'admin'@'%' IDENTIFIED BY 'admin123';.
+Flush privileges: FLUSH PRIVILEGES;.
+Exit the MySQL prompt: exit.
+
+Database Deployment:
+
+Clone the source code: cd /path/to/repository.
+Run SQL queries from the DB_backup.sql file to set up the necessary tables and data in the "accounts" database: mysql -u admin -p accounts < src/main/resources/DB_backup.sql.
+
+Memcache Setup:
+
+Switch to the root user.
+Install Memcached: dnf install -y memcached.
+Start and enable the Memcached service: systemctl start memcached and systemctl enable memcached.
+Edit the Memcached configuration file to allow remote connections: sed -i 's/127.0.0.1/0.0.0.0/' /etc/sysconfig/memcached.
+Restart the Memcached service: systemctl restart memcached.
+
+RabbitMQ Setup:
+
+Switch to the root user.
+Update the OS: yum update -y.
+Enable the RabbitMQ repository: curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | bash.
+Install RabbitMQ: yum install -y rabbitmq-server.
+Start and enable the RabbitMQ service: systemctl start rabbitmq-server and systemctl enable rabbitmq-server.
+Create a configuration file for RabbitMQ: echo "NODENAME=rabbit@localhost" > /etc/rabbitmq/rabbitmq-env.conf.
+Add a user "test" with the password "test" and set it as an administrator: rabbitmqctl add_user test test && rabbitmqctl set_user_tags test administrator.
+Restart the RabbitMQ service: systemctl restart rabbitmq-server.
+Check the status of RabbitMQ: systemctl status rabbitmq-server.
