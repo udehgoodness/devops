@@ -1,0 +1,49 @@
+Setting up Tomcat for the VProfile project. This includes installing Java 11, Git, Maven, and downloading and configuring Apache Tomcat.
+
+Tomcat Setup Steps:
+
+Update the operating system: yum update -y.
+Enable the release repository.
+Install OpenJDK 11: yum install -y java-11-openjdk.
+Install dependencies: yum install -y git maven.
+Download the Tomcat binary tarball using wget.
+Extract the Tomcat tarball to /usr/local/tomcat.
+Create a user for Tomcat: useradd -r -s /sbin/nologin tomcat.
+Copy the contents of the extracted Tomcat folder to /usr/local/tomcat.
+Change ownership of the Tomcat folder to the Tomcat user: chown -R tomcat:tomcat /usr/local/tomcat.
+Create a Tomcat service configuration file at /etc/systemd/system/tomcat.service and edit it with the necessary configuration.
+Reload systemd to apply the changes: systemctl daemon-reload.
+Start Tomcat: systemctl start tomcat.
+Enable Tomcat to start on boot: systemctl enable tomcat.
+Check the status of Tomcat: systemctl status tomcat.
+
+Application Deployment:
+
+Clone the source code for the VProfile project using Git.
+Change to the project directory: cd /path/to/repository.
+Build the application with Maven: mvn install.
+Navigate to the target directory: cd target.
+Copy the generated artifact (ending with .war) to Tomcat's webapps directory with the name "ROOT.war": cp your-artifact.war /usr/local/tomcat/webapps/ROOT.war.
+Remove the default ROOT folder: rm -rf /usr/local/tomcat/webapps/ROOT.
+Start Tomcat: systemctl start tomcat.
+Check the status of Tomcat: systemctl status tomcat.
+
+
+Setting up Nginx for the VProfile project. The steps include updating and upgrading packages, installing Nginx, creating a custom Nginx configuration file, removing the default configuration, creating a symbolic link for the custom configuration, and restarting the Nginx service.
+
+Nginx Setup Steps:
+
+Log in to the server (Web01 in this case) and switch to the root user.
+Update the package list: apt update && apt upgrade -y.
+Install Nginx: apt install -y nginx.
+Create a custom Nginx configuration file at /etc/nginx/sites-available/vproapp with the provided content.
+Remove the default configuration link: rm /etc/nginx/sites-enabled/default.
+Create a symbolic link for the custom configuration: ln -s /etc/nginx/sites-available/vproapp /etc/nginx/sites-enabled/.
+Restart the Nginx service: systemctl restart nginx.
+Check the status of Nginx: systemctl status nginx.
+
+Explanation of Nginx Configuration:
+
+The Nginx server listens on port 80.
+Requests to http://vproapp are routed to the specified backend server (app01) on port 8080.
+After completing these steps, suggests checking the status of the Nginx service to ensure there are no configuration errors. If errors are found, review and correct the configuration file before restarting the Nginx service.
