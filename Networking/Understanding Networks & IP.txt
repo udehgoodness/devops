@@ -1,0 +1,38 @@
+The classification of networks are based on geography or the distance between network interfaces. Here are the main points covered:
+
+Local Area Network (LAN): Devices are in close proximity, typically within a room or a small area. Computers are connected using switches.
+
+Wide Area Network (WAN): Network interfaces can be far apart, such as accessing a website hosted in a different geographical location. The Internet is a significant example of a WAN.
+
+Metropolitan Area Network (MAN): Larger than a LAN but smaller than a WAN, covering a metropolitan city's municipality or specific areas within a city.
+
+Campus Area Network (CAN): Networks within a campus, like an office or college campus. Computers are connected within a limited area.
+
+Personal Area Network (PAN): A personal network, like a Bluetooth or hotspot connection with a very small range.
+
+Networking devices:
+
+Switch: Connects multiple computers within a local area network. Enables communication between devices in the same network.
+
+Router: Connects multiple networks, allowing communication between devices in different networks. Essential for connecting local networks to the Internet.
+
+Understanding home networks. In a typical home network:
+
+A Wi-Fi router connects devices within the home.
+Switches within the router facilitate communication between devices in the same network.
+The router connects to the modem, establishing a connection to the Internet.
+The concepts are extended to larger corporate networks or data centers, where multiple switches, routers, and additional security devices like firewalls are used for high availability and security.
+
+Next, IP addresses:
+
+IPv4 Address: A 32-bit binary number represented in decimal format. Divided into four octets, each ranging from 0 to 255.
+
+Example: 192.168.100.1
+
+IP addresses are classified into public and private ranges:
+
+Public IP: Assigned by ISPs and used on the Internet.
+
+Private IP: Used within private networks. Ranges include Class A (10.x.x.x), Class B (172.16.x.x - 172.31.x.x), and Class C (192.168.x.x).
+
+Finally, Emphasizes the importance of understanding IP addresses and network configurations for setting up AWS VPC (Amazon Virtual Private Cloud) in the future sessions.
