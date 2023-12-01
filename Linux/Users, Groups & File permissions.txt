@@ -1,0 +1,115 @@
+Overview of Users and Groups:
+
+Users and groups are essential for controlling access to files, resources, programs, and processes in a Linux system.
+Every file in the system is owned by a user and belongs to an associated group.
+Users have unique user IDs (UIDs), and this information is stored in the /etc/passwd file.
+
+Types of Users:
+
+Root User: UID 0, GID 0, home directory /root, login shell /bin/bash.
+Regular Users: UID > 1000, GID > 1000, with home directories and login shells.
+System or Service Users: UID 1-999, GID 1-999, often without login shells and used for background processes.
+
+Understanding /etc/passwd and /etc/group:
+
+Demonstrated the structure of the /etc/passwd file, containing user information.
+Explored the /etc/group file, containing group information, including primary group associations for users.
+
+Creating Users and Groups:
+
+Used the useradd command to create users (ansible, jenkins, aws).
+Discussed the distinction between primary and supplementary groups.
+Created a group named "devops" using groupadd.
+
+Adding Users to Groups:
+
+Demonstrated two methods: usermod command and manual edit of /etc/group.
+Showed how to add users (ansible, jenkins, aws) to the "devops" group.
+
+Password Management:
+
+Set passwords for users using the passwd command.
+Highlighted that only the root user can switch to other users without passwords.
+
+Viewing User Information:
+
+Used commands like id, who, and whoami to display information about users.
+Introduced lsof -u to list open files by a specific user.
+
+Deleting Users and Groups:
+
+Removed users using userdel and userdel -r to delete user and home directory.
+Deleted a group using groupdel.
+
+Useful Commands:
+
+Mentioned the last command to show the last logged-in users.
+Discussed the history command to review executed commands.
+
+Practical Tips:
+
+Emphasized the importance of practicing user and group management commands.
+Highlighted that understanding these concepts becomes more effective when combined with file permissions and sudo usage.
+
+Security Considerations:
+
+Cautioned about password security and the ability to switch between users.
+
+
+File Permissions Overview:
+
+Every file (text files, directories, link files, etc.) in Linux has ownership and permissions.
+Ownership consists of a user (owner) and a group.
+Permissions are represented by the characters r (read), w (write), and x (execute).
+
+Understanding File Listing:
+
+Used ls -l to display detailed file information.
+Demonstrated decoding the file listing, highlighting the file type, user permissions, group permissions, and others' permissions.
+
+File Permission Structure:
+
+Described the structure of file permissions in three segments: user, group, and others.
+Explained the meaning of r (read), w (write), and x (execute).
+
+Changing Ownership:
+
+Created a directory /opt/devopsdir and files within it, owned by the root user.
+Added group (devops) and users (ansible, jenkins, aws, miles).
+Edited the group file to include users in the devops group.
+Displayed directory permissions using ls -ld.
+Demonstrated the chown command to change ownership.
+
+Changing Permissions with Symbolic Method:
+
+Used the chmod command to change permissions.
+Showed examples of changing permissions symbolically using + and -.
+
+Changing Permissions with Numeric Method:
+
+Introduced the numeric method for changing permissions.
+Explained the values 4 (read), 2 (write), 1 (execute) for user, group, and others.
+Demonstrated how to use the numeric method with chmod.
+
+Recursive Permission Changes:
+
+Mentioned the -R option in chmod to apply changes recursively to files and subdirectories.
+Emphasized the importance of caution when using recursive operations.
+
+Combining Ownership and Permissions:
+
+Showed how ownership and permission settings work together.
+Gave an example of setting specific permissions for different users and groups.
+
+Additional Notes:
+
+Explain the symbolic method with plus and minus for adding or removing permissions.
+Provided insights into the use of both symbolic and numeric methods based on user preference.
+
+Security Considerations:
+
+Cautioned users to be careful with recursive operations, especially when dealing with a large number of files.
+
+Bonus: Numeric Method for Permissions:
+
+Introduced a quick numeric method to set permissions at once for user, group, and others using numbers 4, 2, 1.
