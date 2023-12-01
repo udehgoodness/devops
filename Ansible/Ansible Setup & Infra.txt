@@ -1,0 +1,13 @@
+In this session, the setup of an Ansible infrastructure, focusing on launching EC2 instances on AWS. The plan includes one EC2 instance named "control" where Ansible will be installed, and three other instances with CentOS operating systems, designated as two web servers and one database server. Additionally, an Ubuntu EC2 instance will be added later as a web server.
+
+The steps involve:
+
+Launching the "control" machine (EC2 instance) using Ubuntu AMI and a t2.micro instance type. A key pair named "control.pem" is created, and a security group ("control SG") allowing SSH access is configured.
+
+Simultaneously launching three other EC2 instances for web servers and a database server. These instances use CentOS 9 AMI and the t2.micro instance type. A key pair named "client key.pem" is created, and a security group ("client-sg") is configured to allow SSH access from the control security group.
+
+After the instances are launched, log into the control machine using SSH and installs Ansible. The installation is performed on the control machine only, as Ansible will leverage SSH connections to manage other machines.
+
+The SSH fingerprinting process and demonstrates how to clear the known_hosts file. This is relevant to Ansible as it will encounter similar questions when connecting to other machines.
+
+Ansible is installed on the control machine using apt-get commands from the Ansible documentation. Check the Ansible version to ensure a successful installation.
