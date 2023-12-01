@@ -1,0 +1,22 @@
+The fundamentals of networking, covering the basics before delving into more advanced topics like cloud computing, Docker, and Kubernetes. The session covers the following topics:
+
+Networking Components: The essential components for networking include devices (computers, smartphones, IoT devices), cables (for wired connections) or wireless networks, network interfaces or NIC cards on devices, and network-enabled devices.
+
+OSI Model: The OSI (Open Systems Interconnection) model is a seven-layer architecture developed by ISO (International Organization for Standardization) in 1984. The layers are Physical, Data Link, Network, Transport, Session, Presentation, and Application. Each layer has specific functions, and the model provides a standardized framework for communication.
+
+Communication Model Analogy: Uses an analogy of sending and receiving letters to explain the OSI model layers. It helps visualize the flow of data from the sender to the receiver, passing through different layers, much like a letter going through different stages of delivery.
+
+Basic Elements of Layered Model: Explains the concepts of services, protocols, and interfaces. Services are actions provided by one layer to another, protocols are rules for communication, and interfaces facilitate communication between layers.
+
+Overview of OSI Model Layers:
+
+Physical Layer: Deals with the physical connection between devices. Converts data into bits (ones and zeros).
+Data Link Layer: Ensures error-free transfer over the physical layer. Works with frames and involves MAC addresses.
+Network Layer: Handles transmission of data between nodes in different networks. Deals with IP addresses and assembles data into packets.
+Transport Layer: Ensures end-to-end connection and reliability. Manages data in segments, provides acknowledgment, and retransmits data if needed.
+Session Layer: Manages sessions, security, encryption, and decryption. Coordinates communication between applications.
+Presentation Layer: Translates, encrypts, and compresses data. Presents data to applications.
+Application Layer: Allows applications to access network resources.
+Devices at Each Layer: The session also provides insights into devices associated with each layer, such as hubs, switches, routers, gateways, and application-related devices like web servers and browsers.
+
+Understanding the functions, devices, and protocols associated with each layer in the OSI model is crucial for networking professionals and DevOps practitioners. 
