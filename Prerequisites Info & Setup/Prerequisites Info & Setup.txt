@@ -1,0 +1,58 @@
+Install Essential Tools:
+
+Installed tools like Oracle VM VirtualBox, Gitbash, Vagrant, chocolatey (for Windows), or brew (for macOS), JDK8, Maven, IntelliJ, Sublime Text Editor, AWS CLI, etc.
+Followed commands for installation and rebooted the computer afterward.
+GitHub Repository Usage:
+
+Navigated to the GitHub repository (github.com/devopshydclub/vprofile-project) for course materials.
+Selected relevant branches for specific projects (e.g., Jenkins and Ansible, CloudFormation, Kubernetes) and learned to locate source code, scripts, and configuration files.
+Domain Purchase and Account Sign-ups:
+
+Understood the importance of purchasing a domain for real-time or production use.
+Purchased a low-cost domain through GoDaddy.
+Created accounts on GitHub, Docker Hub, and Sonar Cloud, configuring Sonar Cloud for future use.
+AWS Account Creation:
+
+Created a free AWS account, emphasizing the need for a valid email address for verification.
+Understood the significance of the AWS free tier.
+IAM User and MFA Setup:
+
+Created an IAM user with multi-factor authentication (MFA) for enhanced security.
+Emphasized the importance of a strong root user password and the option to use password managers.
+Billing Alarm Configuration:
+
+Set up billing alarms in AWS to receive notifications for unexpected expenses or uncleaned resources.
+Enabled billing preferences and CloudWatch alarms for billing alerts.
+Certificate Creation using ACM:
+
+Acknowledged the need for a certificate for HTTPS secure connections.
+Learned the process of creating a public certificate using the ACM service, including DNS validation.
+AWS Console UI Updates:
+
+Became aware of ongoing updates in the AWS console UI.
+Encouraged to explore the updated UI with minimal concerns.
+IAM User Configuration:
+
+Recommended creating a new IAM user for secure service usage instead of relying on the root user.
+Guided through creating an IAM user with administrator access.
+MFA for IAM User:
+
+Demonstrated setting up multi-factor authentication for the IAM user using the Google Authenticator app.
+Billing Alarm Setup with CloudWatch:
+
+Set up billing alarms using CloudWatch to receive notifications if expenses exceed a specified limit.
+Certificate Validation and Configuration:
+
+Learned the process of validating an SSL certificate through DNS records in the domain registrar.
+Emphasized the importance of patience during certificate validation and troubleshooting if needed.
+Customizing AWS Account URL:
+
+Guided on customizing the AWS account URL by creating an alias for easier access to the AWS console.
+IAM User Login:
+
+Demonstrated logging in with the IAM user, highlighting the use of a different browser to avoid conflicts with the root account.
+Emphasized using the IAM user for most tasks and switching to the root account when necessary.
+Recap of Achievements:
+
+Installed all the tools and accounts set up needed, emphasizing the professional approach to AWS setup.
+By completing these steps, I have acquired the necessary tools and accounts, laying the foundation for the practical aspects of the DevOps course.
