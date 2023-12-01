@@ -44,3 +44,37 @@ The permissions are changed to 400, and the Ansible ping command is executed aga
 Successful Ansible Ping:
 
 The Ansible ping command successfully connects to the target machine ("Web01") after fixing the permissions.
+
+Exploration of Ansible inventory files, introducing the concepts of grouping and variables within the inventory. The key points covered are:
+
+
+Expanding Inventory for Multiple Hosts:
+
+The inventory file is modified to include entries for additional hosts: Web02 and DB01.
+Group names (Web servers and DB servers) are assigned, and hosts are placed within their respective groups.
+The concept of YAML formatting and column alignment is emphasized for clarity.
+
+Grouping Hosts:
+
+Introduces the concept of grouping hosts and demonstrates how to create groups such as "Web servers" and "DB servers."
+The structure involves placing hosts under their corresponding group and introducing a parent group (DC_Oregon) that encompasses the other groups.
+
+Executing Modules on Groups:
+
+Ansible commands are executed to ping hosts within the specified groups, illustrating how grouping simplifies module execution.
+The groups "Web servers," "DB servers," and "DC_Oregon" are used for module execution.
+
+Variable Definition at the Group Level:
+
+The concept of variables is introduced, focusing on defining variables at the group level.
+Variables such as "ansible_user" and "ansible_ssh_private_key_file" are defined at the group level (DC_Oregon) to be inherited by the hosts within that group.
+
+Variable Priority:
+
+Variable priority is explained, highlighting that host-level variables take precedence over group-level variables.
+Removes host-level variable definitions, allowing the group-level variables to be used.
+
+Testing Variables:
+
+A test is conducted by intentionally providing incorrect user information to observe the "permission denied" error.
+The correct user information is then provided to demonstrate successful execution.
