@@ -1,0 +1,42 @@
+Server management in Linux, specifically demonstrating how to set up the Httpd service on CentOS and deploy a basic HTML template. Key points include:
+
+Introduction to Server Management:
+
+Overview of the objectives, which involve installing and managing a server or service on a Linux operating system.
+
+Hands-On Practice - CentOS Httpd Setup:
+
+Use the Brave browser to navigate to the toplate.com website, which offers ready-made templates for websites.
+Select a template (e.g., finance) and download the zip file. The instructor recommends using the Brave browser to avoid unnecessary pop-ups.
+Create a new folder for the project in the F drive (e.g., Vagrant VMs/finance).
+Initialize a new Vagrant project using the Euro Linux CentOS box.
+Edit the Vagrantfile to set a static IP (e.g., 192.168.56.22) and allocate 1GB of RAM.
+Install dependencies (wget, vim, unzip, zip) on the CentOS VM.
+Start and enable the Httpd service on CentOS.
+Create an index.html file in the /var/www/html directory to display a basic message.
+Access the default Httpd web page from the browser using the assigned IP.
+
+Downloading and Deploying HTML Template:
+
+Explore the toplate.com website and select a template for download.
+Use the Brave browser's Developer Tools (F12) to find the download link for the template zip file.
+Download the zip file using the wget command in the VM's /tmp directory.
+Unzip the downloaded file and copy its contents (including index.html) to the /var/www/html directory.
+Restart the Httpd service to apply the changes.
+
+Validation and Firewall Considerations:
+
+Validate the status of the Httpd service using systemctl status httpd.
+Check the firewall status (systemctl status firewalld) and, if active, stop and disable it. Note that this step may vary depending on the host operating system.
+
+Final Browser Validation:
+
+Verify the website's deployment by refreshing the browser, ensuring that the HTML template is successfully displayed.
+
+Overview of Server Deployment Steps:
+
+Recap of the server deployment steps, including creating the VM, installing dependencies, configuring services, and deploying data.
+
+Cleanup and Preparation for the Next Lecture:
+
+Exit from the VM, power it off, and consider deleting or destroying the VM to clean up resources.
