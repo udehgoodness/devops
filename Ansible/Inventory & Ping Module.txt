@@ -1,4 +1,6 @@
-The process of establishing a connection between the control machine (Ansible) and the target machines (EC2 instances). The target machines are referred to as "targets," and the connection is made using SSH. Emphasizes that Ansible fetches information about the targets, such as IP addresses, usernames, and private key paths, from the inventory file.
+The process of establishing a connection between the control machine (Ansible) and the target machines (EC2 instances). 
+The target machines are referred to as "targets," and the connection is made using SSH. 
+Emphasizes that Ansible fetches information about the targets, such as IP addresses, usernames, and private key paths, from the inventory file.
 
 Key points covered:
 
