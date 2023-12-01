@@ -1,0 +1,9 @@
+In the Ansible sessions, I've learned about the evolution of automation in the context of DevOps, starting from basic scripting to sophisticated configuration management tools. The journey includes tools like Bash, batch scripting, Python, Ruby, Puppet, Salt Stack, and Chef.
+
+Ansible, written in Python, stands out as a simple yet powerful automation tool. Unlike other tools, Ansible doesn't require agents on target machines. It uses existing connections like SSH or WinRM for communication. The YAML-based playbooks make it easy to read and write automation scripts. Ansible's versatility extends to Linux, Windows, cloud platforms, networking devices, and databases.
+
+I've gained insights into Ansible's architecture, emphasizing its simplicity. Ansible doesn't run a service; it's a Python library executing scripts on target machines. The inventory file specifies target machine details, and Ansible modules perform specific tasks.
+
+This highlight Ansible's features, such as module-based tasks, cloud automation, API task execution, and script execution. While Ansible can replace other automation tools, the choice depends on specific needs and use cases. Emphasizes simplicity and encourages keeping code straightforward while leveraging Ansible's powerful capabilities.
+
+Overall, the sessions have equipped me with the knowledge to use Ansible for system automation, configuration management, cloud automation, and more. I look forward to applying these skills in practical scenarios.
