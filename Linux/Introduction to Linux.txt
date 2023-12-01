@@ -1,0 +1,57 @@
+Importance of Linux:
+
+Linux is the foundation of DevOps.
+Efficiency is a focus in the course.
+Topics include Linux basics, file systems, text file editing, file permissions, filters, and redirection.
+
+
+Introduction to Linux and its principles.
+Basic commands like copying, moving files, etc.
+File systems and text file manipulation.
+Filters and redirection for DevOps.
+Users and groups in Linux.
+Understanding and using sudo.
+Software management (RPM, Debian, yum, apt, etc.).
+Services and processes in Linux.
+Server management, including web servers and database servers.
+
+Open Source and Linux:
+
+Open source is not just about free software.
+Linux is an open source operating system.
+Open source involves freely available code for inspection, modification, and redistribution.
+Linux kernel history and its impact on the IT industry.
+
+Linux Principles for DevOps:
+
+Everything in Linux is considered a file, including hardware.
+Emphasis on small, single-purpose programs for automation.
+Avoidance of captive user interfaces.
+Configuration data stored in text files for easy changes.
+Linux is preferred for DevOps due to open source nature, community support, hardware support, customization, and security.
+
+Linux Architecture Overview:
+
+High-level view of Linux architecture.
+Components include hardware, kernel, shell, and user tools.
+User interaction with tools that communicate with the kernel.
+Explanation of Linux principles for DevOps.
+
+Popular Linux Distros:
+
+Desktop: Ubuntu, Linux Mint, Arch Linux, Fedora, Debian, openSUSE.
+Server: Red Hat Enterprise Linux, CentOS, Ubuntu Server, Oracle Linux.
+Explanation of RPM-based and Debian-based families.
+Personal preferences for server and DevOps use.
+
+Differences Between RPM and Debian:
+
+Packaging differences (RPM vs. DEB).
+Command differences for installing software.
+Importance of being comfortable with both systems for DevOps.
+
+Directory Structure in Linux:
+
+Overview of important directories: /home, /bin, /etc, /tmp, /boot, /var, /lib, /usr/lib, etc.
+Explanation of each directory's purpose.
+
