@@ -1,0 +1,44 @@
+The process of establishing a connection between the control machine (Ansible) and the target machines (EC2 instances). The target machines are referred to as "targets," and the connection is made using SSH. Emphasizes that Ansible fetches information about the targets, such as IP addresses, usernames, and private key paths, from the inventory file.
+
+Key points covered:
+
+Create a Project Directory:
+
+A project directory named "profile" is created, with an "exercise1" subdirectory.
+
+Write Inventory File in YAML Format:
+
+Introduces the inventory file, which specifies information about the hosts (targets).
+YAML format is used for clarity and simplicity.
+An example inventory file is shown from the Ansible documentation.
+
+Inventory File Creation:
+
+Guides the creation of an inventory file named "inventory" within the "exercise1" directory.
+The file specifies a host ("Web01") with its associated variables: IP address, Ansible user, and private key path.
+The private key is expected to be named "client_key.pem" in the current working directory.
+
+Private Key File Creation:
+
+The private key file ("client_key.pem") is created using the content of the key obtained from the EC2 instance.
+Permissions are set to 400 for the key file.
+
+SSH Connection Test:
+
+Demonstrates an Ansible command to ping the target machine ("Web01").
+An SSH key verification question is encountered, and the process is interrupted.
+An error occurs due to key verification failure.
+
+Ansible Configuration:
+
+The Ansible configuration file is generated using a command and then modified to disable host key checking.
+The "host_key_checking" setting is changed to "false" in the configuration file.
+
+Fixing Permission Error:
+
+A permission error is identified for the private key file ("client_key.pem").
+The permissions are changed to 400, and the Ansible ping command is executed again.
+
+Successful Ansible Ping:
+
+The Ansible ping command successfully connects to the target machine ("Web01") after fixing the permissions.
