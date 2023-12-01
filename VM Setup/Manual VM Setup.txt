@@ -1,0 +1,5 @@
+I will need to set up virtual machines manually using Oracle VM VirtualBox. The importance of enabling virtualization in the computer's BIOS for Windows users and demonstrates the process. I will be creating virtual machines for CentOS and Ubuntu, including configuring RAM, CPU, and disk settings.
+
+To highlights the significance of network configurations, particularly the use of bridged adapters for connecting VMs to Wi-Fi routers. The installation of Linux operating systems on the virtual machines, discussing options like partitioning and network settings. SSH setup is also demonstrated, enabling remote access to the VMs.
+
+The Ubuntu VM installation process is similar to CentOS, with specific attention given to enabling OpenSSH for SSH access. The practical knowledge and shutting down VMs after completing tasks. 
