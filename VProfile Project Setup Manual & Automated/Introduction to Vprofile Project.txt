@@ -1,0 +1,13 @@
+My first project involving the deployment of a Java-based website called VProfile. Similar to WordPress, the site comprises multiple services. The task is to deploy this product on five virtual machines, each hosting a specific service. The goal is to simulate a real-world scenario where I'll be working on a product, requiring a local copy for experimentation. This project is designed to provide practical experience in a DevOps context.
+
+I am setting up a multi-tier web application stack called V Profile locally on my machine. The main objectives are to establish a baseline for future projects and to enable the setup of various real-world projects locally for research and development.
+
+The project addresses the common problem of lacking confidence in making changes to real servers and suggests a solution: an automated and repeatable local setup using infrastructure as code.
+
+The tools required for this project include Oracle VM Virtual Box as a hypervisor, Vagrant for automation, Git Bash for command execution and version control, and an optional IDE like Sublime Text for coding.
+
+The architectural design involves services such as Nginx, Tomcat, RabbitMQ, Memcached, and MySQL. The flow of the stack includes a user accessing the web application through a load balancer, routing requests to Tomcat, which interacts with MySQL and Memcached, and optionally RabbitMQ.
+
+Additionally, an automation stack is implemented using Vagrant to communicate with Virtual Box, setting up virtual machines for various services. The flow involves setting up tools, cloning source code, bringing up virtual machines, validating and interacting with each other, and sequentially setting up services like MySQL, Memcached, RabbitMQ, Tomcat, and Nginx.
+
+The execution flow includes setting up tools, cloning source code, bringing up virtual machines, validating them, setting up services sequentially, building and deploying the Java application, and finally verifying the setup through a web browser.
