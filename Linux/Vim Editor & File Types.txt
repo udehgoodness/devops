@@ -1,0 +1,33 @@
+Introduction to Linux Commands:
+
+Logging in as a root user and switching between users.
+Basic file operations such as creating directories, using the touch command, and copying files with cp.
+Introduction to absolute and relative paths.
+Copying directories with the -r option.
+File and directory manipulation using commands like mv (move/rename) and rm (remove).
+
+Linux Command Syntax:
+
+Understanding Linux command syntax, including the command, options, and arguments.
+Exploring various options with the ls command.
+Highlighting the importance of using --help for command details.
+
+Vim Editor Usage:
+
+Installing the Vim text editor using sudo yum install vim -y.
+Understanding Vim modes: command, insert, and extended modes.
+Creating, editing, and saving files using Vim commands.
+Exploring shortcuts for navigation, copy-pasting, and undo/redo operations in Vim.
+
+File Types in Linux:
+
+Discussing different file types, including regular files, directories, and special files (character, block, link, socket, and pipe).
+Using the file command to determine file types.
+Demonstrating the creation of symbolic links and understanding their behavior.
+Learning about the importance of file permissions and ownership.
+
+File Sorting and Timestamps:
+
+Sorting files based on timestamps using ls -lt.
+Reversing the sort order with ls -ltr.
+Making changes to the system configuration, such as updating the hostname in /etc/hostname.
