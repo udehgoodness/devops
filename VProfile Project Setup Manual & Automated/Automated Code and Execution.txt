@@ -1,0 +1,69 @@
+I demonstrate how to set up the entire stack automatically using Vagrant. By running the vagrant up command, all the VMs will be provisioned automatically, along with the setup of Nginx, Tomcat, RabbitMQ, Memcache, and MySQL services. This automation is achieved through the use of bash scripts that are executed automatically during the provisioning process.
+
+The design is similar to the Manual project, where bash scripts handle the provisioning of various services. This automated setup streamlines the process, making it more efficient and reducing the manual steps required to configure each service individually.
+
+Encouraged to follow along and observe how the automation simplifies the deployment of the entire stack. This approach is particularly beneficial for scalability and consistency in deploying complex systems.
+
+Introduces a set of bash scripts designed for automated provisioning using Vagrant. Each VM has its own script for setting up the corresponding service. The scripts are simple and use basic commands, making them easy to understand even for those not familiar with Bash scripting.
+
+Here's a quick overview of the scripts:
+
+MySQL Script (mysql.sh):
+
+Installs MariaDB.
+Sets a database password.
+Starts and enables the MariaDB service.
+Clones the source code.
+Deploys the database schema.
+Configures firewall rules.
+Memcached Script (memcached.sh):
+
+Installs Memcached.
+Starts and enables the Memcached service.
+RabbitMQ Script (rabbitmq.sh):
+
+Installs RabbitMQ.
+Starts and enables the RabbitMQ service.
+Tomcat Ubuntu Script (tomcat-ubuntu.sh):
+
+Installs Java 11.
+Installs Git and Maven.
+Downloads and extracts Tomcat.
+Creates a Tomcat user.
+Copies the necessary files and sets ownership.
+Creates a systemd service configuration for Tomcat.
+Starts and enables the Tomcat service.
+Clones the source code.
+Builds and deploys the application.
+
+Installs Nginx.
+Creates a custom Nginx configuration.
+Disables the default Nginx website.
+Enables and starts the Nginx service.
+The scripts automate the steps previously performed manually in the provisioning process. The use of variables and comments in the scripts enhances readability. 
+
+
+The automated provisioning of the entire stack using Vagrant. The process involves executing the vagrant up command, which brings up all the VMs and runs the provisioning scripts automatically. Here's a summary of the steps:
+
+The vagrant up command is executed in the "automated provisioning" directory.
+
+The process begins with the db01 VM, and the provisioning script mysql.sh is executed. Note that this may take some time.
+
+Memcache provisioning starts after the MySQL setup is completed.
+
+Once Memcache provisioning finishes, the RabbitMQ setup begins.
+
+The provisioning of RabbitMQ involves updating and installing dependencies, potentially taking a considerable amount of time.
+
+The provisioning process continues with app01 and then web01.
+
+Finally, demonstrates the validation of the entire stack by accessing web01 from the browser. Different components like RabbitMQ and Memcache are also validated.
+
+The stack can be brought down using vagrant halt, and the status can be checked with vagrant status.
+
+The automated provisioning process significantly reduces the time and effort required to set up the entire stack, making it a repeatable and efficient approach. The Vagrant tool takes care of the heavy lifting, allowing users to focus on the development and testing of their applications. The local setup is now automated, repeatable, and follows the principles of infrastructure as code (IaC). 
+
+
+
+
+
