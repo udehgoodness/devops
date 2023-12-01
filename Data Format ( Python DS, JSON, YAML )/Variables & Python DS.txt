@@ -1,0 +1,71 @@
+the basics of variables and Python data structures. Here are the key points covered:
+
+Variables in Bash:
+
+Variables are temporary storage in memory.
+In Bash, variables are created by assigning a name followed by an equal sign and a value.
+bash
+
+skill="DevOps"
+Printing the variable is done using echo with a dollar sign before the variable name.
+bash
+
+echo $skill
+Introduction to Python:
+
+To practice Python, the instructor recommends using an online editor, such as the one provided by "repl.it" or any other preferred editor.
+Python Print Statements:
+
+In Python, print is used to display text.
+Strings are enclosed in either single or double quotes.
+python
+
+print("This is my first Python string")
+An empty print statement results in a new line.
+python
+
+print()
+Python Variables:
+
+String variables are defined without quotes.
+python
+
+skill = "DevOps"
+Integer variables are defined without quotes.
+python
+
+number = 123
+Lists in Python are enclosed in square brackets.
+python
+
+tools = ["Jenkins", "Docker", "Kubernetes", "TerraForm"]
+Python Tuple:
+
+Tuples are similar to lists but use parentheses.
+python
+
+k_tuple = ("Jenkins", "Docker", "Kubernetes", "TerraForm")
+List and Tuple Slicing:
+
+Elements in lists and tuples can be accessed using index numbers.
+python
+
+print(tools[1])  # Accessing the second element in the list
+Slicing can also be used to extract a range of elements.
+python
+
+print(tools[1:3])  # Slicing elements from index 1 to 2
+Introduction to Python Dictionary:
+
+A Python dictionary is defined using curly braces and consists of key-value pairs.
+python
+
+devops = {"skill": "DevOps", "year": 2023, "empty": "", "gitops": "GitOps"}
+Accessing dictionary values is done using keys.
+python
+
+print(devops["skill"])
+Strings within dictionaries can also be sliced using index numbers.
+python
+
+print(devops["skill"][0])  # Accessing the first character in the value of the "skill" key
