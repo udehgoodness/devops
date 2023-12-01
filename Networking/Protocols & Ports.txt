@@ -1,0 +1,39 @@
+An overview of protocols in networking communication. Here are the key points covered:
+
+Definition of Protocol:
+
+In networking, a protocol is a formal specification that defines the procedures for communication between a sender and receiver.
+It covers aspects such as the format of communication, timing, sequence, error handling, etc.
+Examples of protocols include HTTP, FTP, SSH, TCP, and UDP.
+
+Transport Layer Protocols:
+
+Protocols at the transport layer (Layer 4) include TCP (Transmission Control Protocol) and UDP (User Datagram Protocol).
+TCP is a reliable protocol, providing a guarantee of data delivery. It is connection-oriented, performs a three-way handshake, and includes error detection and retransmission.
+UDP is an unreliable protocol, faster than TCP, and connectionless. It does not guarantee data delivery and lacks acknowledgment and sequencing.
+
+Port Numbers:
+
+Protocols are associated with port numbers. For example, DNS uses port 53, HTTP uses port 80, and HTTPS uses port 443.
+Understanding default port numbers is essential for configuring firewalls (Security Group or NACL) and other network settings.
+
+Example of Port Numbers:
+
+Port numbers serve as identifiers for services running on a computer. For instance, a web service using HTTPS may run on port 443.
+The analogy of a food court with multiple stalls representing different services running on a computer is used to explain the concept.
+
+OSI vs. TCP/IP Model:
+
+The OSI 7 Layer model is compared with the TCP/IP model. The Application layer in TCP/IP corresponds to Layers 5, 6, and 7 in OSI.
+Examples of protocols at different layers include Telnet, FTP, DHCP, TFTP, SMTP, ICMP, ARP, RARP, IP, etc.
+
+IP Address and Port Number Relationship:
+
+An IP address represents a computer, and a port number identifies a specific service on that computer.
+The combination of an IP address and port number allows devices to communicate effectively.
+
+Project Example (vprofile):
+
+In the context of a project called vprofile, multiple services (Nginx, Tomcat, RabbitMQ, Memcache, MySQL) are hosted on different virtual machines.
+Each service runs on a specific port number (e.g., Nginx on port 80, Tomcat on port 8080).
+Understanding the IP addresses, port numbers, and protocols is crucial for configuring connections and firewalls within the project.
