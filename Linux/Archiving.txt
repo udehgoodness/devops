@@ -1,0 +1,41 @@
+Linux using the tar and zip commands. Here are the key points:
+
+Introduction to Archiving:
+
+Archiving is essential for tasks such as backup, restoring files, or handling files in archive formats.
+The example used /var/log directory, focusing on archiving Jenkins logs.
+Using tar Command:
+
+Demonstrated the tar command for creating a compressed archive.
+Used options -czvf:
+-c: Create a new archive.
+-z: Compress the archive using gzip.
+-v: Verbose mode to display details during the operation.
+-f: Specify the archive file name.
+Provided an example of archiving the Jenkins directory and compressing it into a .tar.gz file.
+Showed how to check the archive file using ls and file commands.
+Extracting with tar:
+
+Moved the tarball to /tmp/ and demonstrated how to extract it using tar -x command.
+Highlighted the -C option to extract the contents to a specific directory (e.g., /opt).
+Overview of tar Options:
+
+Mentioned additional options of the tar command, such as -d for comparing tarballs, updating an existing tarball, and various compression methods like -j for bzip2 and -J for xz.
+Introduction to zip Command:
+
+Installed zip and unzip using the yum package manager.
+Introduced the zip command as an alternative to tar.
+Demonstrated the basic syntax: zip -r archive_name.zip directory_name.
+Archiving with zip:
+
+Created a zip archive of the Jenkins directory with a timestamped filename.
+Moved the zip file to /opt for extraction.
+Extracting with unzip:
+
+Removed the existing Jenkins directory in /opt.
+Extracted the contents of the zip file using the unzip command.
+Compared the extracted directory to confirm the successful operation.
+Closing Thoughts:
+
+Summarized the archiving process using both tar and zip commands.
+Emphasized the versatility of these commands and the choice based on specific requirements.
