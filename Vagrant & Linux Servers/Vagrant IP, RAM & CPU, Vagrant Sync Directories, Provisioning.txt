@@ -1,0 +1,129 @@
+Vagrant Networking:
+
+Configuring IP addresses for virtual machines through the Vagrant file.
+Introducing public network (bridge interface) and private network with a static IP.
+
+Provisioning:
+
+Executing commands automatically when the VM starts up (bootstrapping).
+Making changes to the Vagrant file to customize RAM, CPU, and other VM settings.
+Demonstrating the use of vagrant reload to apply changes to an existing VM.
+
+Understanding Vagrant File:
+
+Exploring the Vagrant file, which is a Ruby script.
+Identifying the beginning and end of Vagrant settings using config and end.
+Highlighting sub-blocks like config.vm.provider.
+
+Vagrant Configuration:
+
+Configuring memory (vb.memory), CPU (vb.cpus), and networking settings in the Vagrant file.
+Enabling bridge networking for public access.
+
+Static IP Address:
+
+Assigning a static IP address to a VM using config.vm.network in the Vagrant file.
+
+Checking VM Configuration:
+
+Verifying VM settings and networking in the VirtualBox GUI.
+Checking RAM and CPU information within the VM.
+
+Vagrant Commands:
+
+Using vagrant up to start a VM.
+Applying changes with vagrant reload.
+Checking VM status with vagrant ssh.
+Shutting down the VM with vagrant halt.
+
+The emphasis is on practical application, and making changes to the Vagrant file, validating configurations, and understanding the impact on VM settings. The use of public and private networks, static IP assignment, and memory/CPU adjustments are covered to provide users with a comprehensive understanding of Vagrant for VM management.
+
+
+Vagrant's ability to synchronize directories between the host machine (your computer) and the guest machine (Vagrant VM). Key points covered include:
+
+Default Sync Directory:
+
+The default sync directory in Vagrant is /vagrant in the VM.
+Any file or directory placed in /vagrant in the VM is automatically synced with the host machine.
+The instructor demonstrates creating files in /vagrant on the VM, and they appear in the host machine's synced directory.
+
+Syncing Custom Directories:
+
+The Vagrant file can be edited to specify custom sync directories.
+The instructor comments out the default sync setting and adds a custom sync folder using config.vm.synced_folder.
+Demonstrates specifying a guest machine path (/opt/scripts) and different host machine paths for Windows and macOS users (F:/Scripts/Shell Scripts for Windows and /users/username/desktop/scripts for macOS).
+Mentioning multiple sync folders is possible for different use cases.
+
+Applying Sync Settings:
+
+The changes made to the Vagrant file require applying, and this is done by reloading the VM (vagrant reload).
+The output of vagrant reload shows the addition of a new synced folder.
+
+Using Synced Folders:
+
+The purpose of using synced folders includes preserving VM files on the host machine for backup and safety.
+The ability to write scripts or programs in the host machine using preferred editors, while changes are reflected in the VM.
+
+File Operations:
+
+The instructor encourages users to perform file operations, such as adding and removing files, in both the host and guest machines.
+Emphasizes that these folders will stay in sync.
+
+Multiple Synced Folders:
+
+Vagrant allows users to define multiple synced folders based on their requirements.
+
+Windows and macOS Path Syntax:
+
+Demonstrates the different path syntax for specifying the host machine path for synced folders on Windows and macOS.
+Windows uses drive letters and backslashes (F:/Scripts/Shell Scripts), while macOS uses forward slashes (/users/username/desktop/scripts).
+
+The key takeaways from this include understanding how to configure custom sync directories in the Vagrant file, how these directories are created automatically on the guest machine, and how changes made in either the host or guest machine are synchronized. This feature is particularly useful for development scenarios where you want to write code on your host machine using your preferred editor while running and testing it in a VM.
+
+
+The concept of provisioning in Vagrant, which involves executing commands or scripts when the VM is created or when specified by the user. Key points include:
+
+Default Provisioning in Vagrant:
+
+Provisioning in Vagrant refers to the execution of commands or scripts when the VM is brought up for the first time.
+By default, provisioning is only done once when the VM is created.
+
+Provisioning Commands:
+
+The instructor demonstrates how to edit the Vagrant file for CentOS.
+Adds configurations for public and private networks with specific IP addresses.
+Enables provisioning by uncommenting the config.vm.provision block and adding provisioning commands using the config.vm.provision "shell", inline: syntax.
+Provisioning commands include installing packages (yum install httpd wget unzip git -y), creating a directory (mkdir /opt/devopsdir), and displaying system information (uptime).
+
+Executing Provisioning:
+
+The CentOS VM is brought up using vagrant up, and the provisioning commands are executed during the process.
+Demonstrates that provisioning is a one-time process during the creation of the VM.
+Points out that running vagrant reload won't trigger provisioning unless the --provision option is specified.
+
+Provisioning on Ubuntu VM:
+
+Similar configurations are applied to the Ubuntu VM in the Vagrant file.
+Specifies provisioning commands using apt-get update and apt-get install apache2 -y.
+
+Forcing Provisioning:
+
+Illustrates how to force provisioning for an already running VM using vagrant reload --provision.
+
+Accessing Provisioned Services:
+
+Accesses the default web page of Apache2 on the Ubuntu VM after provisioning.
+Notes the differences in starting Apache between CentOS and Ubuntu.
+
+Relation to Cloud Computing:
+
+Highlights that the concepts of provisioning and bootstrapping learned in Vagrant are applicable in cloud computing.
+Mentions that in AWS EC2 instances, a similar concept is known as "user data."
+
+Clean-Up:
+
+Recommends destroying the VMs when done experimenting.
+Demonstrates using vagrant destroy to remove the VMs.
+Advises checking VirtualBox for any remaining VMs and deleting them, then using vagrant global status --prune to clear all entries.
+
+
