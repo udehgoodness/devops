@@ -1,0 +1,16 @@
+I am accessing the project's GitHub repository and setting up the local environment. The project involves deploying a multi-tier web application stack called VProfile on five virtual machines, each running different services. The objective is to create a baseline for future projects and enable the local setup of various real-world projects for research and development.
+
+Provides a GitHub link (github.com/coder/profile-project) and to access the "Vagrant" folder. Within this folder, there are subfolders for manual provisioning on Windows and Mac (Intel chip), as well as separate folders for Mac M1 and M2 chips.
+
+Encouraged to download a PDF document that contains detailed steps for setting up the entire project on all virtual machines. The document covers prerequisites, tools required (Oracle VM VirtualBox, Vagrant, and a Vagrant plugin), and instructions for manual provisioning.
+
+The Vagrantfile is explained, detailing the global settings and specific settings for each virtual machine, including CentOS 9 and Ubuntu Jammy 64 for Nginx. Encouraged to understand the file structure and settings before proceeding.
+
+Demonstrates cloning the GitHub repository, navigating to the appropriate folder, and opening the Vagrantfile. The Vagrantfile is then explained, emphasizing the global settings, box names, hostnames, and RAM sizes.
+
+Before bringing up the virtual machines, it is advised to check for and remove any existing VMs. Demonstrates the commands for checking and pruning existing VMs.
+
+The virtual machines are brought up using the "vagrant up" command, and viewers are reminded to clear any VirtualBox consoles that may open during the process. After the VMs are up, logs into each VM to perform a basic network test using ping commands.
+
+The viewers are advised to pause and review the PDF document, familiarizing themselves with the steps before continuing with the setup. Emphasizes the importance of understanding the flow of services and network connections within the stack.
+
