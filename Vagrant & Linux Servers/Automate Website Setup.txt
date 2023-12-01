@@ -1,0 +1,39 @@
+Automate the provisioning of a website using Vagrant and infrastructure as code (IAC) principles. The focus is on creating a Vagrantfile that includes provisioning commands for setting up a finance website. Here's a summary:
+
+Open Project in Visual Studio Code (VS Code):
+
+Open VS Code and navigate to the Vagrant VMs folder.
+Copy the existing finance VM folder and rename it to "IAC" (Infrastructure as Code).
+
+Edit the Vagrantfile:
+
+Open the Vagrantfile in the "IAC" folder.
+Change the IP address to avoid collisions (e.g., 192.168.1.28).
+Uncomment the provisioning section.
+
+Write Provisioning Commands:
+
+Write provisioning commands to set up the website automatically.
+Commands include installing dependencies (Httpd, Wget, Unzip, Vim), starting and enabling Httpd service, creating a temporary folder, downloading and extracting website data, copying data to the document root, restarting the service, and cleaning up temporary files.
+Emphasis on knowing the commands from previous manual setup and verifying each step.
+
+Test the Automation:
+
+Save the Vagrantfile.
+Open Git Bash and navigate to the "IAC" folder.
+Run vagrant up to start the VM and execute the provisioning commands.
+Verify the website by accessing its IP address in the browser.
+
+Reusability and Infrastructure as Code:
+
+Discuss the concept of infrastructure as code (IAC).
+Highlight the ability to reuse code for provisioning websites.
+Emphasize the advantage of having scripts for setting up websites anytime, anywhere.
+
+Cleanup:
+
+After testing, run vagrant destroy to remove the VM.
+Conclusion:
+
+The demonstration showcases the automation of website setup using Vagrant and IAC principles.
+The resulting Vagrantfile with provisioning commands serves as a reusable script for future setups.
