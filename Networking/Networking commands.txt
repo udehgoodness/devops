@@ -1,0 +1,53 @@
+Various networking commands in Linux and Windows. Here are the key commands explained:
+
+ifconfig / ip addr show:
+
+Shows active network interfaces, their names, and IP addresses.
+Example: ifconfig or ip addr show
+
+ping:
+
+Tests network connectivity by sending ICMP packets to a target machine.
+Example: ping <IP_address>
+
+Traceroute / tracert:
+
+Traces the route that packets take from the source to the destination, showing intermediate hops.
+Example (Windows): tracert www.google.in
+
+netstat -antp / ss -tunlp:
+
+Displays all TCP open ports and associated processes.
+Example: netstat -antp or ss -tunlp
+
+nmap:
+
+Scans and discovers open ports on a target machine.
+Example: nmap localhost or nmap <IP_address>
+
+dig / nslookup:
+
+Performs DNS lookups to map a domain name to an IP address.
+Example: dig www.google.com or nslookup www.google.com
+
+route -n:
+
+Shows the gateways for the network interfaces.
+Example: route -n
+
+arp:
+
+Displays or adds content to the ARP table, mapping IP addresses to MAC addresses.
+Example: arp
+
+mtr:
+
+Combines ping and traceroute functionalities, providing live feedback on packet loss and latency.
+Example: mtr www.google.com
+
+telnet:
+
+Connects to a specified port on a target machine.
+Example: telnet <IP_address> <port>
+
+Emphasizes the careful use of certain commands, such as nmap, as they can have legal implications. These commands are valuable for basic network troubleshooting and understanding network configurations on both Linux and Windows systems.
