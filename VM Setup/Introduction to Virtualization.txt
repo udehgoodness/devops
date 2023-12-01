@@ -1,0 +1,47 @@
+Evolution to Virtualization:
+
+Recognized the cost challenges of setting up labs with 5, 10, or 15 computers.
+Learned about virtualization as a solution to efficiently run multiple operating systems on a single machine.
+Acknowledged the ease of creating virtual machines (VMs) through virtualization software.
+
+Introduction to Virtualization Concepts:
+
+Discovered that virtualization allows one computer to perform the functions of multiple computers simultaneously.
+Understood the historical reliance on physical servers for running services and applications.
+Realized the challenges of isolation and over-provisioning in the traditional approach.
+
+Role of VMware in Virtualization:
+
+Explored the transformative impact of VMware in introducing virtualization.
+Embraced the concept of running multiple operating systems on a single computer, enhancing isolation.
+
+Terminology and Virtualization Components:
+
+Familiarized with key terms such as host OS, guest OS (VM), snapshot, and hypervisor.
+Differentiated between type 1 (bare metal) and type 2 (hosted) hypervisors.
+Recognized that virtualization allows for the partitioning of physical resources into virtual resources.
+
+Lab Setup and Automation:
+
+Prepared for creating virtual machines using Oracle VM VirtualBox and Vagrant.
+Understood the importance of automation but emphasized the prerequisite of manual understanding.
+Recognized the need for a 64-bit computer with a high-speed internet connection for optimal performance.
+
+Manual VM Creation:
+
+Learned the manual process of VM creation, involving Oracle VM VirtualBox and ISO files for CentOS and Ubuntu.
+Emphasized the significance of knowing manual steps before proceeding to automation.
+
+Automated VM Creation with Vagrant:
+
+Prepared for automated VM creation using Vagrant, VirtualBox, and specific tools.
+Recognized Vagrant as a tool to simplify and expedite the VM creation process.
+
+Lab Requirements:
+
+Acknowledged the tools required for both manual and automated setups, including Oracle VM VirtualBox, ISO files, and Vagrant.
+
+Course Direction:
+
+Anticipated the importance of these lab exercises for practicing Linux and upcoming tools in the DevOps course.
+Prepared for a shift to cloud computing, with initial emphasis on Linux VMs for foundational practice.
