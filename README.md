@@ -1,5 +1,7 @@
 # DevOps Engineer
 
+Welcome to my Github. My name is Chinemelum Goodness Udeh, a passionate and recently certified DevOps engineer eager to revolutionize the world of software development and delivery. Armed with a solid foundation acquired from comprehensive online training, I am dedicated to automating, optimizing, and streamlining the entire software development lifecycle.
+
 As a newly trained DevOps engineer, I’ve gained valuable skills in automating, optimizing, and streamlining the software development and delivery processes.
 
 ## Overview
