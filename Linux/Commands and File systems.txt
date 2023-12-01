@@ -35,6 +35,46 @@ Explanation of key directories:
 /var: Storage for server data.
 Insight into the purpose of each directory.
 
+Switching Users:
+
+Explanation of how to switch between users using the exit command.
+Logging out from the root user brings you back to the current user (vagrant user).
+
+File-Based Commands:
+
+Demonstration of file-related commands:
+Creating directories (mkdir) named dev, ops, and backup.
+Using touch to create empty files (testfile.txt, devopsfile1.txt to devopsfile10.txt).
+Copying files (cp) between directories.
+Copying a directory and resolving an error by using the -r (recursive) option.
+Moving files (mv) between directories and renaming files.
+Introduction to Linux command syntax: command, options, and arguments.
+
+Linux Command Syntax:
+
+Explanation of the syntax structure: command, options, and arguments.
+Use of the --help option to display available options for a command.
+Emphasis on not memorizing all options but using available help when needed.
+
+Regular Expressions and Wildcards:
+
+Usage of * as a wildcard for multiple files in commands like mv *.
+Demonstrating the use of regular expressions to perform multiple actions at once.
+
+File Removal Commands:
+
+Introduction to the rm command for removing files and directories.
+Use of rm with the -r option to remove directories recursively.
+Caution about the potential danger of using rm -r * to delete everything in the current directory.
+
+History Command:
+
+Mention of the history command to view executed commands.
+
+Cautionary Note:
+
+Emphasis on being cautious with commands like rm -r * to prevent accidental deletion of important files.
+
 Commands Recap:
 
 Recap of basic commands, navigation, and system exploration.
