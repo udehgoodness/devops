@@ -1,0 +1,171 @@
+Introduction to sudo:
+
+sudo allows normal users to execute commands with root privileges.
+Demonstrated examples of using sudo -i to switch to the root user and execute root commands.
+
+Understanding sudo Privileges:
+
+Highlighted that by default, only the vagrant user has sudo privileges.
+Showed examples of root commands executed with sudo.
+
+Granting sudo Privileges:
+
+Explained how to grant sudo privileges to other users by adding them to the sudoers file.
+Emphasized that sudo acts as a power of attorney on behalf of the root user.
+
+Testing sudo for Non-privileged User:
+
+Logged in as the ansible user and attempted to execute root commands using sudo.
+Encountered an error indicating that ansible is not in the sudoers file.
+
+Editing the sudoers File:
+
+Set a password for the ansible user using passwd ansible.
+Opened the sudoers file using visudo.
+Copied the root user line and added a new line for the ansible user.
+Showed that ansible could then execute sudo -i.
+
+Making sudo Non-interactive:
+
+Demonstrated how to make sudo non-interactive by adding NOPASSWD to the sudoers file.
+Used visudo again and added ansible ALL=(ALL) NOPASSWD:ALL.
+Showed that ansible could then execute sudo commands without entering its password.
+
+Using sudoers.d Directory:
+
+Discussed a safer method of managing sudo privileges by using the /etc/sudoers.d/ directory.
+Created a new file /etc/sudoers.d/devops and added devops ALL=(ALL) NOPASSWD:ALL to it.
+
+Safety Considerations:
+
+Discouraged direct editing of the /etc/sudoers file due to the risk of syntax errors.
+Advocated for using /etc/sudoers.d/ and creating individual files for better organization.
+
+Additional Notes:
+
+Mentioned that syntax errors in the sudoers file can render sudo non-functional.
+Showed that if syntax errors occur, visudo provides an option to fix them before saving.
+
+Practice and Recap:
+
+Encouraged users to practice and gain a thorough understanding of sudo and sudoers.
+Highlighted the importance of the sudo command in allowing non-root users to perform administrative tasks.
+
+Software management in Linux, focusing on RPM (Red Hat Package Manager) and YUM (Yellowdog Updater, Modified). Here are the key points:
+
+Introduction to Software Management:
+
+Highlighted the importance of software or package management in Linux.
+Emphasized the diversity in methods of installing or setting up software.
+
+Manual Installation with RPM:
+
+Demonstrated a manual way of setting up a package using the tree command as an example.
+Searched for the tree RPM online, downloaded it using curl, and installed it with rpm -i.
+
+Understanding RPM Commands:
+
+Explained various options for the rpm command, such as -e for erasing, -q for querying, and others.
+Showcased commands like rpm -qa to list all installed RPMs and rpm -e to remove an installed package.
+
+Introduction to YUM:
+
+Introduced YUM as a package manager that automates the process of package installation and management.
+Discussed the repository configuration files located in /etc/yum.repos.d/.
+
+Using YUM for Package Installation:
+
+Demonstrated how to search for a package using yum search.
+Installed the httpd package using yum install httpd and observed that it automatically handled dependencies.
+
+Installing Jenkins with YUM:
+
+Searched for Jenkins installation instructions on the official website.
+Used yum install wget to install the wget utility.
+Followed the provided commands to configure the Jenkins repository and install Jenkins.
+
+Managing Software with YUM Commands:
+
+Showed common YUM commands like yum upgrade to update all packages and yum remove to uninstall a package.
+Explained the importance of updating packages for security and performance.
+
+Additional YUM Commands:
+
+Mentioned other YUM commands such as yum reinstall, yum group list, yum repolist, yum clean all, yum history, and yum info.
+
+services in a Linux system and demonstrated the management of services using systemctl. Here are the key points:
+
+Introduction to Services:
+
+Mentioned the concept of services running on a Linux system.
+Focused on the httpd service, which is a web service.
+
+Managing Services with systemctl:
+
+Demonstrated how to install the httpd package using yum install httpd.
+Checked the status of the httpd service using systemctl status httpd.
+Started the httpd service with systemctl start httpd.
+Checked the status again to confirm that it's active.
+Explained the concept of starting, stopping, and restarting services.
+
+Service Persistence:
+
+Discussed the issue of services not automatically starting after a system reboot.
+Used systemctl enable httpd to enable the httpd service to start at boot time.
+
+Checking Service Status:
+
+Introduced additional systemctl commands for checking service status.
+Used systemctl is-active httpd to check if the service is currently active.
+Used systemctl is-enabled httpd to check if the service is enabled for boot time.
+
+Understanding systemctl Configuration:
+
+Explained the configuration file for the httpd service located at /etc/systemd/system/multi-user.target.wants/httpd.service.
+Showed the content of the configuration file, which specifies the binary and its arguments to start and stop the service.
+
+Service Management Recap:
+
+Summarized the key systemctl commands used for service management.
+
+Linux system, introducing commands like top, ps aux, ps -ef, and demonstrated how to manage processes using kill. Here are the key points:
+
+Processes Overview:
+
+Processes in a Linux system can be in a running or sleeping state.
+Used the top command, which is similar to a task manager in Windows, to view dynamic processes based on CPU and RAM consumption.
+Discussed various information displayed by the top command, including uptime, load average, total tasks, CPU and RAM utilization.
+
+Process Management Commands:
+
+Introduced various commands to manage processes.
+Used ps aux to display detailed information about processes, including process ID (PID), user, CPU and RAM utilization, status, and process name.
+Demonstrated ps -ef to show processes with additional information such as the parent process ID (PPID).
+
+Parent and Child Processes:
+
+Discussed parent and child processes and how processes are initiated (forked) by other processes.
+Illustrated the hierarchy of processes, where a parent process starts child processes.
+
+Process Termination:
+
+Introduced the kill command for terminating processes.
+Demonstrated how to use kill with the parent process ID to stop a process.
+Explored the option -9 for a forceful termination, which may result in orphan processes.
+
+Handling Orphan Processes:
+
+Explained orphan processes as those whose parent process has terminated.
+Demonstrated how systemd adopts orphan processes.
+Showed how to forcefully terminate orphan processes using a combination of commands (ps, awk, xargs, kill).
+
+Handling Zombie Processes:
+
+Defined zombie processes as dead processes with an entry still in the process table.
+Recommended rebooting the machine as the best way to clear zombie processes.
+Introduced the ps aux command to identify zombie processes and discussed potential issues.
+
+Process Filtering and Batch Termination:
+
+Demonstrated how to filter processes and selectively terminate them using awk and xargs.
+Showed a command to find and kill processes at once by 
