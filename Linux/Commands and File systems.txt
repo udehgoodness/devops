@@ -1,0 +1,41 @@
+Vagrant VM Setup:
+
+Use of Vagrant VM created in the previous section.
+Lectures cover CentOS and Ubuntu distributions.
+Verification of VM status using vagrant global-status.
+
+Basic Commands in Linux:
+
+cd to navigate to the Vagrant VM folder.
+vagrant up to start the VM.
+Basic commands such as whoami, pwd, ls, cat, and sudo -i to switch to the root user.
+Understanding of the directory structure and system paths.
+
+Navigating Directories:
+
+Use of cd command to move between directories.
+Clearing the screen with clear.
+Exploration of the root directory (/) and its subdirectories.
+
+System Information:
+
+Introduction to /proc and /sys directories for dynamic system information.
+Examples of dynamic files, such as /proc/uptime.
+Dynamic content that changes based on system status.
+
+Directory Structure:
+
+Explanation of key directories:
+
+/home: User home directories.
+/bin, /usr/bin: User and system executable programs.
+/etc: Configuration files.
+/tmp: Temporary files directory.
+/boot: Bootloader and kernel configurations.
+/var: Storage for server data.
+Insight into the purpose of each directory.
+
+Commands Recap:
+
+Recap of basic commands, navigation, and system exploration.
+Use of absolute paths and understanding of the root directory.
