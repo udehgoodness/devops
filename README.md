@@ -1,10 +1,10 @@
 # DevOps Engineer
 
-As a newly trained DevOps engineer, you've gained valuable skills in automating, optimizing, and streamlining the software development and delivery processes.
+As a newly trained DevOps engineer, I've gained valuable skills in automating, optimizing, and streamlining the software development and delivery processes.
 
-#Overview:
+# Overview:
 
-This course has equipped you with the following key skills and knowledge:
+This course has equipped me with the following key skills and knowledge:
 
 		Version Control:
 	•	Proficient use of Git for source code version control.
@@ -23,13 +23,13 @@ This course has equipped you with the following key skills and knowledge:
 	•	Basic knowledge of container orchestration tools like Kubernetes.
  
 		Configuration Management:
-	•	Implementing configuration management with tools like Puppet, Chef, or Ansible.
+	•	Implementing configuration management with tools like Ansible.
  
 		Monitoring and Logging:
 	•	Setting up monitoring solutions for applications and infrastructure.
 	•	Utilizing logging tools for effective troubleshooting and analysis.
  
-#Project Showcase:
+# Project Showcase:
 
 Feel free to explore the projects and exercises completed during the course:
 
@@ -45,7 +45,7 @@ Feel free to explore the projects and exercises completed during the course:
 		Kubernetes Deployment:
 	•	Basic Kubernetes manifests for deploying and managing applications.
  
-#Next Steps:
+# Next Steps:
 
 As you embark on your DevOps journey, consider the following steps:
 
