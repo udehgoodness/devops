@@ -1,0 +1,33 @@
+The various ways to define and use variables in Ansible. Key points:
+
+Defining Variables in Playbooks:
+
+Variables in Ansible playbooks are defined using the var keyword.
+Syntax: var: { variable_name: variable_value }
+Example: var: { DB_Name: "Electric", DB_User: "Current", DB_Pass: "Tesla" }
+
+Inventory-Based Variables:
+
+Variables can be defined at the inventory level for all hosts or specific groups/hosts.
+Group Variables: group_vars/all or group_vars/group_name
+Host Variables: host_vars/host_name
+
+Roles in Ansible:
+
+Roles have two files where variables can be defined: vars and defaults.
+
+Fact Variables:
+
+Fact variables are automatically generated during the "gathering facts" task, initiated by the setup module.
+Examples of fact variables include ansible_os_family, ansible_processor_cores, and others.
+
+Runtime Variables:
+
+Output of a task can be stored in a variable using the register option.
+This stored output can be used in subsequent tasks.
+
+Debug Module:
+
+The debug module is used to print variables and messages for troubleshooting purposes.
+It can be used to print the output of a registered variable.
+Demonstrated the process of defining variables in playbooks, using them in tasks, and printing them using the debug module. Additionally, the concept of registering task output and using it later was introduced.
