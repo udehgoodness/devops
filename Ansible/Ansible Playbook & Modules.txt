@@ -1,0 +1,45 @@
+Ansible playbooks, the focus was on understanding how to write playbooks and the structure they follow. Key points covered include:
+
+Ansible Playbooks:
+
+Ansible playbooks are similar to scripts in other languages and are written in YAML format.
+A playbook is a collection of plays, and each play consists of tasks to be executed on a specific group of hosts.
+
+Playbook Structure:
+
+The structure of a playbook involves specifying the host or host group, defining tasks, and using modules for those tasks.
+Indentation is crucial, and tasks are organized hierarchically with plays at the top level, tasks beneath them, and modules specified within tasks.
+
+Creating a Playbook:
+
+Demonstrated creating a simple playbook with two plays: one for web servers and one for database servers.
+Tasks within plays included installing packages and starting services.
+
+Execution of Playbooks:
+
+The process of executing playbooks involves using the ansible-playbook command followed by the inventory path and playbook name.
+Options such as --syntax-check and -C (dry run) were introduced for checking syntax and simulating playbook execution.
+
+Debugging and Troubleshooting:
+
+The importance of debugging and understanding the output was emphasized, including the use of verbosity levels (-v, -vv, -vvv) to get detailed information.
+
+Documentation Exploration:
+
+Explore Ansible documentation to find information about modules and playbooks.
+The documentation structure was explained, emphasizing the importance of understanding module parameters and examples.
+
+Assignment:
+
+Encouraged to go through the extensive list of Ansible modules and familiarize with the documentation structure.
+The goal is to become comfortable with searching for modules, understanding their parameters, and using examples.
+
+Ansible modules, focusing on the copy module for file operations and MySQL modules for database tasks. Emphasized the importance of finding, using, troubleshooting, and fixing modules, common tasks for DevOps engineers. The process involved exploring the Ansible module index, understanding module segregation (e.g., files, database, cloud), and executing practical exercises.
+
+For the file module, the copy module was used to transfer files from the control machine to web servers. Walked through the playbook creation, emphasizing YAML structure and essential parameters like source, destination, and optional settings such as backup.
+
+Moving to the database module, the MySQL module was introduced for tasks like creating databases. Challenges arose due to dependencies, requiring the installation of Python MySQL libraries. Demonstrated troubleshooting by identifying the missing dependency and resolving it using package installation.
+
+Later, using the community MySQL module, which simplifies MySQL-related tasks. Highlighted the need to install this module using Ansible Galaxy and integrated it into the playbook. Further, the MySQL user module was introduced for adding database users, and similar troubleshooting steps were applied, addressing issues related to the socket file.
+
+The overall takeaway was not only the specific modules but also the problem-solving skills involved in working with Ansible modules. Encouraged to explore module documentation, understand dependencies, and effectively use community-contributed modules. 
