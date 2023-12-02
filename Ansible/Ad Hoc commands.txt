@@ -1,0 +1,39 @@
+Ansible ad hoc commands and basic modules. Ad hoc commands are useful for executing quick tasks without writing full playbooks. Emphasized the importance of version controlling all configurations but acknowledged the need for quick actions.
+
+Key Takeaways:
+
+Ad Hoc Commands:
+
+Ad hoc commands are quick, one-liner commands used for tasks that are infrequently repeated.
+They provide a way to perform tasks without creating full playbooks.
+Examples include rebooting or powering off machines in a group.
+
+Ansible Modules:
+
+Ansible modules are used within ad hoc commands to perform specific tasks on hosts.
+Examples of modules covered include ansible.builtin.yum for package management, ansible.builtin.service for managing services, and ansible.builtin.copy for copying files.
+
+Configuration Management:
+
+Ansible's configuration management approach is item potent, meaning changes are applied only if the target's state differs from the desired state.
+Changes are reported in the output, and if there's nothing to change, the output indicates "changed: false."
+
+Executing Ad Hoc Commands:
+
+Ad hoc commands are executed from the command line using the ansible command followed by the host or group name and the desired module.
+Privilege escalation can be achieved with --become to run commands with sudo privileges.
+
+Examples of Ad Hoc Commands:
+
+Installing a package: ansible web_servers -m ansible.builtin.yum -a "name=httpd state=present" --become
+Starting and enabling a service: ansible web_servers -m ansible.builtin.service -a "name=httpd state=started enabled=yes" --become
+Copying a file: ansible web_servers -m ansible.builtin.copy -a "src=index.html dest=/var/html/index.html"
+
+Understanding Changes:
+
+The output includes a "changed" attribute, indicating whether changes were applied (true or false).
+Configuration management ensures that tasks are only performed if there are differences between the desired and current states.
+Testing the Website:
+
+Demonstrated copying an index.html file to web servers, showing that changes are applied only when there's a difference.
+The final step involved accessing the web server's public IP in a browser to view the modified website.
