@@ -31,3 +31,4 @@ Debug Module:
 The debug module is used to print variables and messages for troubleshooting purposes.
 It can be used to print the output of a registered variable.
 Demonstrated the process of defining variables in playbooks, using them in tasks, and printing them using the debug module. Additionally, the concept of registering task output and using it later was introduced.
+
