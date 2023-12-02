@@ -14,7 +14,7 @@ I have been equipped with the following key skills and knowledge:
 
 - **Continuous Integration/Continuous Deployment (CI/CD):**
   - Setting up CI/CD pipelines for automated testing and deployment.
-  - Integrating CI/CD tools like Jenkins, GitLab CI, or GitHub Actions.
+  - Integrating CI/CD tools like Jenkins.
 
 - **Infrastructure as Code (IaC):**
   - Writing infrastructure code using tools such as Terraform or Ansible.
