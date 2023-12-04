@@ -1,0 +1,9 @@
+Virtual Private Cloud (VPC) and its significance in AWS. Emphasized the importance of understanding networking basics, particularly subnetting, before delving into VPC.
+
+Explained the evolution from traditional data center networking to AWS EC2 services and the limitations faced by users in terms of networking control. AWS addressed these concerns by introducing VPC, enabling users to design their own logical data center within a chosen region. VPC allows control over IP addressing, security, and routing tables, offering a customizable network environment.
+
+The basics of IPv4 addressing, subnetting, and CIDR notation were covered. IPv4 addresses were explained as 32-bit binary numbers divided into octets. Highlighted the distinction between public and private IP ranges, using classes A, B, and C for private networks. Subnet masks were discussed as crucial elements that determine network range, addresses, and the number of usable IPs.
+
+The concept of CIDR notation (Classless Inter-Domain Routing) was introduced as a more modern way to represent subnet masks. Demonstrated how to calculate and understand CIDR notation, emphasizing its importance in cloud computing and virtualization.
+
+The practical aspect involved creating a VPC and instances within it, underscoring the foundational role of networking in AWS infrastructure. Recommended revising the material and understanding IP addressing and subnetting thoroughly before proceeding with VPC setup.
