@@ -47,7 +47,7 @@ Feel free to explore the projects and exercises completed so far:
 - **[Dockerized Application](https://github.com/udehgoodness/devops/tree/main/Containers):**
   - Sample application containerized with Docker for consistency across environments.
 
-- **[VProfile Project Setup Manual & Automated](https://github.com/udehgoodness/devops/tree/main/VProfile%20Project%20Setup%20Manual%20%26%20Automated):**
+- **[VProfile Project Setup Manual & Automated](https://github.com/udehgoodness/vprofile-project):**
   - Deployment of a Java-based website called VProfile.
 
 ## Next Steps
